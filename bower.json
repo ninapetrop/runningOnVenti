@@ -12,7 +12,7 @@
   "overrides": {
     "bootstrap-sass": {
       "main": [
-        "./assets/stylesheets/_bootstrap.scss",
+        "./assets/stylesheets/_bootstrap.sass",
         "./assets/javascripts/bootstrap/transition.js",
         "./assets/javascripts/bootstrap/alert.js",
         "./assets/javascripts/bootstrap/button.js",

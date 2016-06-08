@@ -1,0 +1,49 @@
+@media (max-width: 990px)
+	aside
+		display: none
+
+aside
+	order: 2
+	font-family: "Crimson Text", serif
+	background: white
+	width: 180px
+	@media (min-width: 851px) and (max-width: 1000px)
+		margin-right: 40px
+	@media (min-width: 1001px)
+		margin-right: 80px
+	@media (min-width: 1300px)
+		margin-right: 150px
+	section
+		margin: 20px 0 50px 0
+		h3
+			background: #FFD0AD
+			text-transform: capitalize
+			color: white
+			font-size: 16px
+			font-weight: 300
+			text-align: center
+			height: 34px
+			padding-top: 4px
+		ul
+			list-style: none
+			padding-left: 15px
+			a
+				color: black
+				text-decoration: none
+				font-size: 18px
+	// now reading, animated block
+	section.widget_text
+		border-left: solid 2px #FFD0AD
+		padding: 1px 0 10px 10px
+		margin-bottom: 100px
+		h3
+			display: none
+		.textwidget
+			.now-reading-title
+				font-weight: 600
+				font-size: 16px
+			.now-reading-meta, .byline
+				color: $grey
+				font-weight: 300
+			.byline a
+				color: $grey

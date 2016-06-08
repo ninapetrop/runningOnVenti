@@ -26,3 +26,22 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+// Allow PHP to be written inside text-widget
+function php_execute($html){
+	if(strpos($html,"<"."?php")!==false){ ob_start(); eval("?".">".$html);
+	$html=ob_get_contents();
+	ob_end_clean();
+	}
+	return $html;
+}
+add_filter('widget_text','php_execute',100);
+
+
+// Add Category conditional
+$wpb_all_query = new WP_Query(array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'posts_per_page' => -1,
+    'category_name' => 'your_category_slug'
+));

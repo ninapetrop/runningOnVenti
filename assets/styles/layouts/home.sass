@@ -1,0 +1,79 @@
+#top
+	width: 1287px
+	display: flex
+	justify-content: space-between
+	#article-carousel
+		width: 945px
+		height: auto
+		display: flex
+		justify-content: space-between
+		.cycle
+			height: 621px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			.article-group
+				width: 282px
+				height: 198px
+				border: solid 1px yellow
+				.preview-image
+					width: 282px
+					height: 198px
+					background: blue
+				.preview-excerpt
+					display: none
+
+		// The active, carousel story
+		.article-group.active
+			width: 631px
+			height: 621px
+			.preview-image
+				background: red
+				width: 100%
+				height: 420px
+			.preview-excerpt
+				height: 200px
+				display: flex
+				flex-direction: column
+				align-content: center
+				display: inline
+				// The title
+				a
+					font-family: "Crimson Text", serif
+					font-size: 20px
+					font-weight: 600
+					color: black
+					text-decoration: none
+	#unique-sidebar
+		width: 299px
+		height: 620px
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		align-content: center
+		box-shadow: 2px 2px 10px 0 rgba(210, 210, 210, .9)
+		border-radius: 5px
+		.half
+			text-align: center
+			h2
+				font:
+					size: 22px
+					weight: 300
+		img
+			width: 80px
+			height: auto
+			margin: auto
+			background: blue
+		ul
+			list-style: none
+			padding-left: 0
+			text-align: center
+			font-family: "Crimson Text", serif
+			li
+				font-size: 18px
+				font-weight: 700
+				ul li a
+						color: black
+						font-weight: 500
+						font-size: 16px
+						text-decoration: none

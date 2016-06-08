@@ -10,3 +10,5 @@
     </nav>
   </div>
 </header>
+
+<?php get_template_part( 'templates/feature-image' ); ?>

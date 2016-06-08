@@ -64,7 +64,7 @@
 
 ### 8.0.1: February 26th, 2015
 * Update asset-builder version to fix Windows compatibility ([#1351](https://github.com/roots/sage/issues/1351))
-* Fix broken wiredep imports with main.scss.example ([Discussion](https://discourse.roots.io/t/issue-with-sage-sass-version/2962))
+* Fix broken wiredep imports with main.sass.example ([Discussion](https://discourse.roots.io/t/issue-with-sage-sass-version/2962))
 
 ### 8.0.0: February 25th, 2015
 * Change theme name from Roots to Sage
@@ -80,7 +80,7 @@
 * Implement JSON file based asset pipeline with [asset-builder](https://github.com/austinpray/asset-builder)
 * Re-organize asset file structure
 * Re-organize stylesheet file structure
-* Add main.scss.example and instructions for using Sass
+* Add main.sass.example and instructions for using Sass
 * Use the primary theme stylesheet for the editor stylesheet
 * Remove theme activation, move to [wp-cli-theme-activation](https://github.com/roots/wp-cli-theme-activation)
 * Simplify 404 page
