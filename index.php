@@ -23,7 +23,10 @@
 
 			<div class='article-group active'>
 				<!-- Set the feature_image as the background image -->
-				<div class='preview-image'></div>
+				<?php
+$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+?>
+				<div class='preview-image' style="background-image: url(<?php echo $src[0]; ?> ) !important;"></div>
 				<!-- Fill the content box -->
 				<div class='preview-excerpt'>
 					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -43,8 +46,13 @@
 			foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
 				<div class='article-group'>
+
 					<!-- Set the feature_image as the background image -->
-					<div class='preview-image'></div>
+					<?php
+	$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+	?>
+					<div class='preview-image' style="background-image: url(<?php echo $src[0]; ?> ) !important;"></div>
+
 					<!-- Fill the content box -->
 					<div class='preview-excerpt'>
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
