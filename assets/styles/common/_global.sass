@@ -1,14 +1,73 @@
 *
 	box-sizing: border-box
 body
-	background: rgba(0, 0, 0, .02)
 	font-family: "Open Sans", sans-serif
 	margin: 0
 	.wrap.container
 		padding-top: 20px
 		main
-			background: white
-			section
-				padding: 10px 20px
-				//display: flex
-				width: 100%
+			background: rgba(242, 242, 242, .3)
+			margin: auto
+			padding: 50px 10px 10px 10px
+
+
+// Break Points
+// Small PHone = 320
+@media (min-width:320px)
+	main
+		width: 310px
+		margin: auto
+	header, footer
+		.container
+			width: 310px
+// Medium Phone = 375
+@media (min-width:375px)
+	main
+		width: 360px
+		margin: auto
+	header, footer
+		.container
+			width: 360px
+// Large PHone = 425
+@media (min-width:425px)
+	main
+		width: 415px
+		margin: auto
+	header, footer
+		.container
+			width: 415px
+// Tablet = 768px
+@media (min-width:786px)
+	main
+		width: 786px
+		margin: auto
+	header, footer
+		.container
+			width: 786px
+
+// Laptop = 1024px
+@media (min-width:1024px)
+	main
+		width: 990px
+		margin: auto
+	header, footer
+		.container
+			width: 990px
+
+// Laptop = 1024px
+@media (min-width:1200px)
+	main
+		width: 1190px
+		margin: auto
+	header, footer
+		.container
+			width: 1190px
+
+// Laptop large - 1440px
+@media (min-width:1440px)
+	main
+		width: 1390px
+		margin: auto
+	header, footer
+		.container
+			width: 1390px
