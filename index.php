@@ -260,6 +260,12 @@
 
 	</div>
 
-</div> <!-- /.container -->
+	</div> <!-- /.container -->
 </section>
+
+<section id='instagram'>
+	<?php echo do_shortcode('[instagram-feed]'); ?>
+
+</section>
+
 <!-- <?php the_posts_navigation(); ?> -->

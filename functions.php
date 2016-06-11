@@ -45,3 +45,6 @@ $wpb_all_query = new WP_Query(array(
     'posts_per_page' => -1,
     'category_name' => 'your_category_slug'
 ));
+
+
+// Instagram Stuff
