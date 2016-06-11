@@ -1,8 +1,8 @@
-section#top
+section#top .container
 	// Cycles through three posts as previews
 	display: flex
-	justify-content: space-around
-	padding: 10px 20px
+	justify-content: space-between
+	margin-bottom: 20px
 	#article-carousel
 		@media (max-width: 320px)
 			width: 320px
@@ -112,3 +112,52 @@ section#top
 					a
 						color: black
 						text-decoration: none
+
+section#middle
+	background: white
+	border-top: solid 1px #efefef
+	border-bottom: solid 1px #efefef
+	.container
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		.category-wrap
+			width: 284px
+			h3
+				font-family: "Crimson Text", serif
+				text-align: center
+				font-size: 18px
+				font-weight: 600
+				text-decoration: underline
+				margin: 35px auto 25px auto
+			.article-group
+				margin-bottom: 30px
+				border-top: solid 1px #fafafa
+				&:first-of-type
+					border-top: none
+				.preview-image
+					height: 188px
+					background-position: center center
+					background-size: cover
+				.preview-excerpt
+					padding: 5px
+					.meta
+						color: grey
+						font-size: 13px
+						font-weight: 300
+						margin-top: 3px
+						margin-bottom: 10px
+					a
+						font-family: "Crimson Text", serif
+						font-size: 18px
+						font-weight: 600
+						color: black
+						text-decoration: none
+						&:hover
+							text-decoration: underline
+					.excerpt
+						color: grey
+						font-size: 15px
+						font-weight: 300
+						margin-top: 10px
+						margin-bottom: 0
