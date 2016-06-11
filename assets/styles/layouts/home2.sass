@@ -1,0 +1,163 @@
+section#top .container
+	// Cycles through three posts as previews
+	display: flex
+	justify-content: space-between
+	margin-bottom: 20px
+	#article-carousel
+		@media (max-width: 320px)
+			width: 320px
+			margin: auto
+		max-width: 797px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		@media (max-width: 1300px)
+			margin: auto
+		.article-group.active
+			width: 590px
+			height: 393px
+			background: grey
+			box-shadow: 2px 2px 10px 0 #d8d8d8
+			.article-image
+				width: inherit
+				height: inherit
+		.cycle-group
+			@media (max-width: 425px)
+				display: none
+			@media (max-width: 880px)
+				order: 3
+			//width: 591px
+			height: inherit
+			display: flex
+			justify-content: space-around
+			@media (min-width: 880px)
+				width: 182px
+				flex-direction: column
+				justify-content: space-between
+			.article-group
+				width: inherit
+				height: 126px
+				box-shadow: 2px 2px 10px 0 #d8d8d8
+				.article-image
+					width: inherit
+					@media (max-width: 880px)
+						width: 182px
+					height: inherit
+					background-position: center center
+					background-size: cover
+					border-radius: 2px
+				.article-excerpt
+					display: none
+		.article-excerpt.active
+			border: solid 1.5px #d8d8d8
+			background: white
+			border-radius: 2px
+			padding: 8px
+			margin-top: 10px
+			width: 590px
+			box-shadow: 2px 2px 10px 0 #efefef
+			@media (max-width: 880px)
+				order: 1
+			.meta
+				color: grey
+				font-size: 13px
+				font-weight: 300
+				margin-top: 3px
+				margin-bottom: 10px
+			a
+				font-family: "Crimson Text", serif
+				font-size: 20px
+				font-weight: 600
+				color: black
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+			.excerpt
+				color: grey
+				font-size: 15px
+				font-weight: 300
+				margin-top: 10px
+				margin-bottom: 0
+
+	#unique-sidebar
+		@media (max-width: 1300px)
+			display: none
+		width: 300px
+		height: 620px
+		background: white
+		border: solid 1px #efefef
+		border-radius: 2px
+		padding: 10px
+		text-align: center
+		box-shadow: 2px 2px 10px 0 #efefef
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		.half
+			img
+				height: 50px
+				width: auto
+		.half
+			ul
+				list-style: none
+				padding-left: 0
+				li
+					font-weight: 700
+					color: black
+					font-family: "Crimson Text", serif
+				ul li
+					font-weight: 500
+					margin-top: 15px
+
+					a
+						color: black
+						text-decoration: none
+
+section#middle
+	background: white
+	border-top: solid 1px #efefef
+	border-bottom: solid 1px #efefef
+	.container
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		.category-wrap
+			width: 284px
+			h3
+				font-family: "Crimson Text", serif
+				text-align: center
+				font-size: 18px
+				font-weight: 600
+				text-decoration: underline
+				margin: 35px auto 25px auto
+			.article-group
+				margin-bottom: 30px
+				border-top: solid 1px #fafafa
+				&:first-of-type
+					border-top: none
+				.preview-image
+					height: 188px
+					background-position: center center
+					background-size: cover
+				.preview-excerpt
+					padding: 5px
+					.meta
+						color: grey
+						font-size: 13px
+						font-weight: 300
+						margin-top: 3px
+						margin-bottom: 10px
+					a
+						font-family: "Crimson Text", serif
+						font-size: 18px
+						font-weight: 600
+						color: black
+						text-decoration: none
+						&:hover
+							text-decoration: underline
+					.excerpt
+						color: grey
+						font-size: 15px
+						font-weight: 300
+						margin-top: 10px
+						margin-bottom: 0
