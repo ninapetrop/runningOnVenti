@@ -14,62 +14,6 @@
 
 <section id='top'>
 	<div class='container'>
-
-		<div id="slider-wrapper"> <!-- aka article-carousel -->
-
-		  <div id="slider-container"> <!-- aka article-group active -->
-
-				<?php
-				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 3, 'offset'=> 0);
-				$myposts = get_posts( $args );
-				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-
-				<!-- Set the feature_image as the background image -->
-				<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
-				<div class='slide' style="background-image: url(<?php echo $src[0]; ?> ) !important;"></div> <!-- aka article-image -->
-
-				<?php endforeach;
-				wp_reset_postdata();?>
-
-			</div>
-
-		  <ul id="menu">
-
-				<?php
-				// Set up the side menu
-				$args = array( 'posts_per_page' => 3, 'offset'=> 0);
-				$myposts = get_posts( $args );
-				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-
-				<!-- Set the feature_image as the background image -->
-				<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
-				<li style="background-image: url(<?php echo $src[0]; ?> ) !important;"></li>
-
-				<?php endforeach;
-				wp_reset_postdata();?>
-		  </ul>
-
-		  <div id="exerpt-container">
-				<?php
-				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 3, 'offset'=> 0);
-				$myposts = get_posts( $args );
-				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-		    	<div class="exerpt ">
-						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-						<p class='excerpt'><?php the_excerpt(); ?></p>
-					</div>
-				<?php endforeach;
-				wp_reset_postdata();?>
-		  </div>
-
-		</div>
-	</div> <!-- /.container -->
-</section>
-
-<section id='top'>
-	<div class='container'>
 	<!-- Show the three most recent posts -->
 	<div id='article-carousel'>
 		<!-- Javascript will fill in the info for these boxes -->
