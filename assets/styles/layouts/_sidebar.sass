@@ -5,8 +5,10 @@
 aside
 	order: 2
 	font-family: "Crimson Text", serif
-	background: white
 	width: 180px
+	position: relative
+	top: 150px
+	height: auto
 	@media (min-width: 851px) and (max-width: 1000px)
 		margin-right: 40px
 	@media (min-width: 1001px)
@@ -16,14 +18,15 @@ aside
 	section
 		margin: 20px 0 50px 0
 		h3
-			background: #FFD0AD
+			background: $brand-primary
 			text-transform: capitalize
 			color: white
 			font-size: 16px
-			font-weight: 300
+			font-weight: 600
 			text-align: center
 			height: 34px
-			padding-top: 4px
+			padding-top: 8px
+			border-radius: 1px
 		ul
 			list-style: none
 			padding-left: 15px
@@ -33,7 +36,7 @@ aside
 				font-size: 18px
 	// now reading, animated block
 	section.widget_text
-		border-left: solid 2px #FFD0AD
+		border-left: solid 2px $brand-primary
 		padding: 1px 0 10px 10px
 		margin-bottom: 100px
 		h3
@@ -47,3 +50,13 @@ aside
 				font-weight: 300
 			.byline a
 				color: $grey
+
+	.widget_recent_entries
+		ul li
+			padding: 25px 0
+			font-size: 18px
+			font-weight: 500
+
+aside.sticky
+	top: 70px
+	position: fixed

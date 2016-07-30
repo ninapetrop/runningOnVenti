@@ -19,6 +19,22 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+				$(window).scroll(function(){
+					var wScroll = $(this).scrollTop();
+
+					console.log(wScroll);
+				});
+
+				$(window).scroll(function(){
+					var wScroll = $(this).scrollTop();
+
+					if (wScroll >= 681) {
+						$('.sidebar').addClass('sticky');
+					}
+					else {
+						$('.sidebar').removeClass('sticky');
+					}
+				});
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
