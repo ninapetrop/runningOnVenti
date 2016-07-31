@@ -53,10 +53,20 @@ aside
 
 	.widget_recent_entries
 		ul li
-			padding: 25px 0
-			font-size: 18px
-			font-weight: 500
+				padding: 15px 0
+				font-weight: 500
+				display: flex
+				flex-direction: column
+				a
+					font-size: 16px
+					order: 2
+				span.post-date
+					color: $grey
+					font-size: 12px
+					font-weight: 300
+					font-family: 'Open Sans', sans-serif
+					margin-bottom: 8px
 
-aside.sticky
-	top: 70px
-	position: fixed
+	section
+		ul
+			padding-left: 0
