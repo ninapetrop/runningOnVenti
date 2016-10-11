@@ -18,27 +18,106 @@
 		<!-- Show the three most recent posts -->
 			<div id='slider-container'>
 				<!-- Holds the Slides -->
-				<div class="slide one" style='background-image: url("https://s-media-cache-ak0.pinimg.com/736x/7c/4b/0e/7c4b0e9ecd5afd76af57e5131f31ad67.jpg")'></div>
+				<!-- <div class="slide one" style='background-image: url("https://s-media-cache-ak0.pinimg.com/736x/7c/4b/0e/7c4b0e9ecd5afd76af57e5131f31ad67.jpg")'></div>
 		    <div class="slide two" style='background-image: url("https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/1887840/attachments/320942/chieftain-wallpaper-1920x1080.jpg")'></div>
-		    <div class="slide three" style='background-image: url("http://wallpapersonthe.net/wallpapers/b/3840x2160/3840x2160-polygon_art_vector_polygon-13251.png")'></div>
+		    <div class="slide three" style='background-image: url("http://wallpapersonthe.net/wallpapers/b/3840x2160/3840x2160-polygon_art_vector_polygon-13251.png")'></div> -->
+
+				<?php
+				// Grab the first thre ...
+				$args = array( 'posts_per_page' => 1, 'offset'=> 0);
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+					<!-- Set the feature_image as the background image -->
+					<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
+					<div class='slide one' style="background-image: url(<?php echo $src[0]; ?> ) !important;"></div>
+
+				<?php endforeach;
+				wp_reset_postdata();?>
+
+				<?php
+				// Grab the first thre ...
+				$args = array( 'posts_per_page' => 1, 'offset'=> 1);
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+					<!-- Set the feature_image as the background image -->
+					<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
+					<div class='slide two' style="background-image: url(<?php echo $src[0]; ?> ) !important;"></div>
+
+				<?php endforeach;
+				wp_reset_postdata();?>
+
+				<?php
+				// Grab the first thre ...
+				$args = array( 'posts_per_page' => 1, 'offset'=> 2);
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+					<!-- Set the feature_image as the background image -->
+					<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
+					<div class='slide three' style="background-image: url(<?php echo $src[0]; ?> ) !important;"></div>
+
+				<?php endforeach;
+				wp_reset_postdata();?>
 			</div>
 
 			<ul id='menu'style='margin-left: 10px;'>
-				<li style='background-image: url("https://s-media-cache-ak0.pinimg.com/736x/7c/4b/0e/7c4b0e9ecd5afd76af57e5131f31ad67.jpg")'></li>
-		    <li style='background-image: url("https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/1887840/attachments/320942/chieftain-wallpaper-1920x1080.jpg")'></li>
-		    <li style='background-image: url("http://wallpapersonthe.net/wallpapers/b/3840x2160/3840x2160-polygon_art_vector_polygon-13251.png")'></li>
+
+				<?php
+				// Grab the first thre ...
+				$args = array( 'posts_per_page' => 1, 'offset'=> 0);
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+					<!-- Set the feature_image as the background image -->
+					<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
+					<li style="background-image: url(<?php echo $src[0]; ?> ) !important;"></li>
+
+				<?php endforeach;
+				wp_reset_postdata();?>
+				<?php
+				// Grab the first thre ...
+				$args = array( 'posts_per_page' => 1, 'offset'=> 1);
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+					<!-- Set the feature_image as the background image -->
+					<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
+					<li style="background-image: url(<?php echo $src[0]; ?> ) !important;"></li>
+
+				<?php endforeach;
+				wp_reset_postdata();?>
+				<?php
+				// Grab the first thre ...
+				$args = array( 'posts_per_page' => 1, 'offset'=> 2);
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+					<!-- Set the feature_image as the background image -->
+					<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
+					<li style="background-image: url(<?php echo $src[0]; ?> ) !important;"></li>
+
+				<?php endforeach;
+				wp_reset_postdata();?>
+
 			</ul>
 
 			<div id='exerpt-container'>
-				<div class='exerpt'>
+				<?php
+				// Grab the first thre ...
+				$args = array( 'posts_per_page' => 3, 'offset'=> 0);
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
-				</div>
-				<div class='exerpt'>
+					<div class='exerpt'>
+						<p class='meta'><?php the_date(); ?></p>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<p class='exerpt'><?php the_excerpt(); ?></p>
+					</div>
 
-				</div>
-				<div class='exerpt'>
-
-				</div>
+				<?php endforeach;
+				wp_reset_postdata();?>
 			</div> <!-- ./exerpt-container -->
 		</div> <!-- slider-wrapper -->
 		<div class='col-xs-12 col-lg-4 pull-right' id='unique-sidebar'>
@@ -249,9 +328,11 @@
 	</div> <!-- /.container -->
 </div>
 
-<!-- <section id='instagram'>
+<!--
+<section id='instagram'>
 	<?php echo do_shortcode('[instagram-feed]'); ?>
 
-</section> -->
+</section>
+-->
 
 <!-- <?php the_posts_navigation(); ?> -->
