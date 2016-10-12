@@ -142,7 +142,7 @@
 
 		<!-- Category Specific Sections -->
 		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3' id='training'>
-			<h3>Training</h3>
+			<h3 id='training'>Training</h3>
 
 				<!-- First Section: Show the most recent post in a category and also show the thumbnail -->
 				<?php
@@ -188,7 +188,7 @@
 		</div>
 
 		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3' id='recipes'>
-			<h3>Recipes</h3>
+			<h3 id='recipes'>Recipes</h3>
 
 				<!-- First Section: Show the most recent post in a category and also show the thumbnail -->
 				<?php
@@ -234,7 +234,7 @@
 		</div>
 
 		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3' id='lifestyle'>
-			<h3>Lifestyle</h3>
+			<h3 id='lifestyle'>Lifestyle</h3>
 
 				<!-- First Section: Show the most recent post in a category and also show the thumbnail -->
 				<?php
@@ -280,7 +280,7 @@
 		</div>
 
 		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3' id='product-reviews'>
-			<h3>Product Reviews</h3>
+			<h3 id='product-reviews'>Product Reviews</h3>
 
 				<!-- First Section: Show the most recent post in a category and also show the thumbnail -->
 				<?php
