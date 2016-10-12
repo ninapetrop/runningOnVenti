@@ -16,30 +16,6 @@ header.banner
 		justify-content: space-between
 		align-items: center
 		height: 100%
-		// .brand
-		// 	text-decoration: none
-		// 	font-size: 22px
-		// 	color: #66574A
-		// 	width: 250px
-		// .nav-primary
-		// 	width: 400px
-		// 	ul
-		// 		width: auto
-		// 		text-align: center
-		// 		list-style: none
-		// 		display: flex
-		// 		justify-content: space-around
-		// 		width: 400px
-		// 		text-align: center
-		// 		@media (max-width: 786px)
-		// 			display: none
-		// 		li
-		// 			text-align: center
-		// 			font-size: 15px
-		// 		a
-		// 		  color: #66574A
-		// 		  text-transform: capitalize
-		// 		  text-decoration: none
 		nav.navbar-default
 			width: 100%
 			border: none
@@ -51,10 +27,51 @@ header.banner
 				padding: 0
 				.navbar-header
 					height: 50px
-					position: fixed
+					//position: fixed
 				.navbar-collapse
 					height: 500px
 					height: inherit
+					overflow: auto
 					ul.nav
-						li ul.dropdown-menu
-							background: blue
+						li.categories, li.pagenav
+							visibility: hidden
+							ul
+								visibility: visible !important
+								display: flex
+								@media (max-width: 990px)
+									flex-direction: column
+								list-style: none
+								padding-left: 0
+								li
+									padding: 5px 10px
+
+				@media (max-width: 990px)
+				  .navbar-header
+				    float: none
+				  .navbar-left, .navbar-right
+				    float: none !important
+				  .navbar-toggle
+				    display: block
+				  .navbar-collapse
+				    border-top: 1px solid transparent
+				    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
+				  .navbar-fixed-top
+				    top: 0
+				    border-width: 0 0 1px
+				  .navbar-collapse.collapse
+				    display: none !important
+						height: auto !important
+						position: absolute
+						z-index: 1
+						background: #fafafa
+						width: 100%
+				  .navbar-nav
+				    float: none !important
+				    margin-top: 7.5px
+				    > li
+				      float: none
+				      > a
+				        padding-top: 10px
+				        padding-bottom: 10px
+				  .collapse.in
+				    display: block !important

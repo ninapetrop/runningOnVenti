@@ -24,15 +24,15 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="./wordpress/about">About</a></li>
-						<li><a href="./wordpress/category/product-reviews">Product Reviews</a></li>
-						<li><a href="./wordpress/category/recipes">Recipes</a></li>
-						<li><a href="./wordpress/category/training">Training</a></li>
-						<li><a href="./wordpress/category/lifestyle">Lifestyle</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="./wordpress/category/archives">Archives</a></li>
-		      </ul>
+					<ul class="nav navbar-nav navbar-right">
+						<?php wp_list_pages( array(
+				        'orderby' => 'name'
+				    ) ); ?>
+				    <?php wp_list_categories( array(
+				        'orderby' => 'name'
+				    ) ); ?>
+					</ul>
+
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 	</nav>

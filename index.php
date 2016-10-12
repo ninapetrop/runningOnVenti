@@ -1,5 +1,3 @@
-<?php get_template_part('templates/page', 'header'); ?>
-
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'sage'); ?>
@@ -156,7 +154,7 @@
 	<div class='container'>
 
 		<!-- Category Specific Sections -->
-		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3' id='training'>
+		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3 pull-left' id='training'>
 			<h3 id='cross-training'>Cross Training</h3>
 
 				<!-- First Section: Show the most recent post in a category and also show the thumbnail -->
@@ -340,14 +338,14 @@
 
 		</div>
 
+
 	</div> <!-- /.container -->
 </div>
-
-<!--
-<section id='instagram'>
+<!-- <section id='instagram'>
 	<?php echo do_shortcode('[instagram-feed]'); ?>
 
-</section>
--->
+</section> -->
+
+
 
 <!-- <?php the_posts_navigation(); ?> -->
