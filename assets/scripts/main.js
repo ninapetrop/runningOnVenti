@@ -65,6 +65,7 @@
 
 				// set the initial position of the slides to the left of the container. the first slide won't be considered because is the visible slide when the effect starts
 				TweenLite.set(slides.not(":eq(0)"), {autoAlpha: 0});
+				TweenLite.set(exerpts.not(":eq(0)"), {autoAlpha: 0});
 				TweenLite.set(menuLi[0], {backgroundColor:"red"});
 
 				function changeSlide()
