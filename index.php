@@ -341,10 +341,10 @@
 
 	</div> <!-- /.container -->
 </div>
-<!-- <section id='instagram'>
+<section id='instagram'>
 	<?php echo do_shortcode('[instagram-feed]'); ?>
 
-</section> -->
+</section>
 
 
 
