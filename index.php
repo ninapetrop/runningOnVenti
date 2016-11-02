@@ -1,5 +1,3 @@
-<?php get_template_part('templates/page', 'header'); ?>
-
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'sage'); ?>
@@ -106,11 +104,26 @@
 			<div id='exerpt-container'>
 				<?php
 				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 3, 'offset'=> 0);
+				$args = array( 'posts_per_page' => 1, 'offset'=> 0);
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
 					<div class='exerpt'>
+						<p class='meta'><?php the_date(); ?></p>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<p class='exerpt'><?php the_excerpt(); ?></p>
+					</div>
+
+				<?php endforeach;
+				wp_reset_postdata();?>
+
+				<?php
+				// Grab the first thre ...
+				$args = array( 'posts_per_page' => 2, 'offset'=> 1);
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+					<div class='exerpt' style='visibility:hidden'>
 						<p class='meta'><?php the_date(); ?></p>
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						<p class='exerpt'><?php the_excerpt(); ?></p>
@@ -141,13 +154,13 @@
 	<div class='container'>
 
 		<!-- Category Specific Sections -->
-		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3' id='training'>
-			<h3 id='training'>Training</h3>
+		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3 pull-left' id='training'>
+			<h3 id='cross-training'>Cross Training</h3>
 
 				<!-- First Section: Show the most recent post in a category and also show the thumbnail -->
 				<?php
 				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 1, 'offset'=> 0, 'category_name' => "training");
+				$args = array( 'posts_per_page' => 1, 'offset'=> 0, 'category_name' => "cross-training");
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
@@ -169,7 +182,7 @@
 
 				<?php
 				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 2, 'offset'=> 1, 'category_name' => "training");
+				$args = array( 'posts_per_page' => 2, 'offset'=> 1, 'category_name' => "cross-training");
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
@@ -188,12 +201,12 @@
 		</div>
 
 		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3' id='recipes'>
-			<h3 id='recipes'>Recipes</h3>
+			<h3 id='fuel-up'>Fuel Up!</h3>
 
 				<!-- First Section: Show the most recent post in a category and also show the thumbnail -->
 				<?php
 				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 1, 'offset'=> 0, 'category_name' => "recipes");
+				$args = array( 'posts_per_page' => 1, 'offset'=> 0, 'category_name' => "fuel-up");
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
@@ -215,7 +228,7 @@
 
 				<?php
 				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 2, 'offset'=> 1, 'category_name' => "recipes");
+				$args = array( 'posts_per_page' => 2, 'offset'=> 1, 'category_name' => "fuel-up");
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
@@ -234,12 +247,12 @@
 		</div>
 
 		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3' id='lifestyle'>
-			<h3 id='lifestyle'>Lifestyle</h3>
+			<h3 id='life'>Life</h3>
 
 				<!-- First Section: Show the most recent post in a category and also show the thumbnail -->
 				<?php
 				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 1, 'offset'=> 0, 'category_name' => "lifestyle");
+				$args = array( 'posts_per_page' => 1, 'offset'=> 0, 'category_name' => "life");
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
@@ -261,7 +274,7 @@
 
 				<?php
 				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 2, 'offset'=> 1, 'category_name' => "lifestyle");
+				$args = array( 'posts_per_page' => 2, 'offset'=> 1, 'category_name' => "life");
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
@@ -280,12 +293,12 @@
 		</div>
 
 		<div class='category-wrap col-xs-12 col-sm-6 col-lg-3' id='product-reviews'>
-			<h3 id='product-reviews'>Product Reviews</h3>
+			<h3 id='its-not-all-physical'>It's Not All Physical</h3>
 
 				<!-- First Section: Show the most recent post in a category and also show the thumbnail -->
 				<?php
 				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 1, 'offset'=> 0, 'category_name' => "product-reviews");
+				$args = array( 'posts_per_page' => 1, 'offset'=> 0, 'category_name' => "its-not-all-physical");
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
@@ -307,7 +320,7 @@
 
 				<?php
 				// Grab the first thre ...
-				$args = array( 'posts_per_page' => 2, 'offset'=> 1, 'category_name' => "product-reviews");
+				$args = array( 'posts_per_page' => 2, 'offset'=> 1, 'category_name' => "its-not-all-physical");
 				$myposts = get_posts( $args );
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
@@ -325,14 +338,14 @@
 
 		</div>
 
+
 	</div> <!-- /.container -->
 </div>
-
-<!--
 <section id='instagram'>
 	<?php echo do_shortcode('[instagram-feed]'); ?>
 
 </section>
--->
+
+
 
 <!-- <?php the_posts_navigation(); ?> -->
